@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="res_config_settings_view_form_mp" model="ir.ui.view">
+      <field name="name">res.config.settings.view.form.mp</field>
+      <field name="model">res.config.settings</field>
+      <field name="inherit_id" ref="base.view_res_config_settings"/>
+      <field name="arch" type="xml">
+        <xpath expr="//div[hasclass('settings')]" position="inside">
+          <div class="app_settings_block" data-string="Mercado Pago" string="Mercado Pago" data-key="pos">
+            <h2>Mercado Pago (POS)</h2>
+            <div class="row mt16 o_settings_container">
+              <div class="col-12 col-lg-6 o_setting_box">
+                <div class="o_setting_left_pane">
+                  <field name="mp_access_token" password="True"/>
+                </div>
+                <div class="o_setting_right_pane">
+                  <label for="mp_access_token"/>
+                  <div class="text-muted">Access Token de Mercado Pago (Producción/Sandbox).</div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 o_setting_box">
+                <div class="o_setting_left_pane">
+                  <field name="mp_public_key"/>
+                </div>
+                <div class="o_setting_right_pane">
+                  <label for="mp_public_key"/>
+                  <div class="text-muted">Public Key (opcional).</div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 o_setting_box">
+                <div class="o_setting_left_pane">
+                  <field name="mp_sandbox"/>
+                </div>
+                <div class="o_setting_right_pane">
+                  <label for="mp_sandbox"/>
+                  <div class="text-muted">Activar entorno Sandbox.</div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 o_setting_box">
+                <div class="o_setting_left_pane">
+                  <field name="mp_collector_id"/>
+                </div>
+                <div class="o_setting_right_pane">
+                  <label for="mp_collector_id"/>
+                  <div class="text-muted">Collector ID del vendedor asociado al QR.</div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 o_setting_box">
+                <div class="o_setting_left_pane">
+                  <field name="mp_external_pos_id"/>
+                </div>
+                <div class="o_setting_right_pane">
+                  <label for="mp_external_pos_id"/>
+                  <div class="text-muted">Identificador del punto de venta configurado en Mercado Pago.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
