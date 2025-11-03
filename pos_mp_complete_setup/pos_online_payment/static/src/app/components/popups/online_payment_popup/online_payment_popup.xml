@@ -1,0 +1,16 @@
+<odoo>
+  <template id="OnlinePaymentPopup" inherit_id="point_of_sale.OnlinePaymentPopup">
+    <xpath expr="//div[contains(@class, 'online-payment-popup__body')]" position="inside">
+      <div class="mp-payment-wrapper">
+        <img t-att-src="props.qrCode or 'https://www.mercadopago.com.ar/qr/static/mi_qr_code.png'" class="mp-payment-wrapper__qr"/>
+        <div class="mp-payment-wrapper__details">
+          <span class="mp-payment-wrapper__label">Total a pagar</span>
+          <span class="mp-payment-wrapper__amount">
+            <t t-esc="props.formattedAmount or props.orderTotal"/>
+          </span>
+          <span class="mp-payment-wrapper__hint">Escaneá el QR y confirma el pago desde Mercado Pago.</span>
+        </div>
+      </div>
+    </xpath>
+  </template>
+</odoo>
